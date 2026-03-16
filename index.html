@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Tenvo</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f7f5f0;
+      --surface: #ffffff;
+      --ink: #1a1814;
+      --ink-muted: #6b6760;
+      --accent: #2a4d3e;
+      --accent-light: #e8f0ec;
+      --rule: #e0ddd6;
+      --link: #2a4d3e;
+      --max-w: 740px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      font-weight: 300;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Header ── */
+    header {
+      background: var(--accent);
+      color: #fff;
+      padding: 64px 24px 56px;
+      text-align: center;
+    }
+
+    .brand {
+      font-family: 'DM Serif Display', serif;
+      font-size: 13px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      opacity: 0.7;
+      margin-bottom: 20px;
+    }
+
+    header h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 400;
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      margin-bottom: 16px;
+    }
+
+    .updated {
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      opacity: 0.65;
+      text-transform: uppercase;
+    }
+
+    /* ── Layout ── */
+    .wrapper {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ── Intro ── */
+    .intro {
+      background: var(--surface);
+      border-bottom: 1px solid var(--rule);
+      padding: 40px 24px;
+    }
+
+    .intro p {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      color: var(--ink-muted);
+      font-size: 15px;
+    }
+
+    /* ── Summary Cards ── */
+    .summary-section {
+      padding: 56px 24px;
+    }
+
+    .summary-section h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 28px;
+    }
+
+    .cards {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      padding: 24px 20px;
+      opacity: 0;
+      transform: translateY(16px);
+      animation: fadeUp 0.5s ease forwards;
+    }
+
+    .card:nth-child(1) { animation-delay: 0.05s; }
+    .card:nth-child(2) { animation-delay: 0.1s; }
+    .card:nth-child(3) { animation-delay: 0.15s; }
+    .card:nth-child(4) { animation-delay: 0.2s; }
+    .card:nth-child(5) { animation-delay: 0.25s; }
+    .card:nth-child(6) { animation-delay: 0.3s; }
+
+    @keyframes fadeUp {
+      to { opacity: 1; transform: none; }
+    }
+
+    .card-icon {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: var(--ink-muted);
+      line-height: 1.6;
+    }
+
+    /* ── TOC ── */
+    .toc-section {
+      background: var(--accent-light);
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      padding: 40px 24px;
+    }
+
+    .toc-section h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      max-width: var(--max-w);
+      margin: 0 auto 20px;
+    }
+
+    .toc-list {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      list-style: none;
+      columns: 2;
+      column-gap: 32px;
+    }
+
+    @media (max-width: 560px) {
+      .toc-list { columns: 1; }
+    }
+
+    .toc-list li {
+      margin-bottom: 8px;
+      break-inside: avoid;
+    }
+
+    .toc-list a {
+      font-size: 14px;
+      color: var(--link);
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    .toc-list a:hover {
+      border-bottom-color: var(--accent);
+    }
+
+    .toc-list .num {
+      color: var(--ink-muted);
+      font-weight: 300;
+      margin-right: 6px;
+    }
+
+    /* ── Policy Body ── */
+    .policy-body {
+      padding: 64px 24px 80px;
+    }
+
+    .policy-body .wrapper > section {
+      margin-bottom: 56px;
+      padding-bottom: 56px;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .policy-body .wrapper > section:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+
+    .section-number {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+
+    .policy-body h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(1.3rem, 3vw, 1.75rem);
+      font-weight: 400;
+      line-height: 1.25;
+      margin-bottom: 20px;
+      color: var(--ink);
+    }
+
+    .policy-body h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      margin-top: 28px;
+      margin-bottom: 10px;
+      color: var(--ink);
+    }
+
+    .policy-body p {
+      margin-bottom: 16px;
+      color: var(--ink-muted);
+      font-size: 15px;
+    }
+
+    .policy-body ul {
+      margin: 0 0 16px 20px;
+    }
+
+    .policy-body ul li {
+      color: var(--ink-muted);
+      font-size: 15px;
+      margin-bottom: 6px;
+    }
+
+    .in-short {
+      background: var(--accent-light);
+      border-left: 3px solid var(--accent);
+      padding: 14px 18px;
+      border-radius: 0 4px 4px 0;
+      margin-bottom: 24px;
+    }
+
+    .in-short p {
+      font-size: 14px;
+      font-style: italic;
+      color: var(--accent);
+      margin: 0;
+    }
+
+    .contact-block {
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      padding: 24px;
+      margin-top: 16px;
+    }
+
+    .contact-block p {
+      margin: 0;
+      font-size: 15px;
+    }
+
+    .contact-block a {
+      color: var(--link);
+      font-weight: 500;
+    }
+
+    /* ── Links ── */
+    a { color: var(--link); }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--ink);
+      color: rgba(255,255,255,0.45);
+      text-align: center;
+      padding: 32px 24px;
+      font-size: 13px;
+    }
+
+    footer span { color: rgba(255,255,255,0.7); }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="brand">Tenvo</div>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated — March 16, 2026</p>
+  </header>
+
+  <!-- Intro -->
+  <div class="intro">
+    <p class="wrapper">
+      This Privacy Notice describes how and why we might access, collect, store, use, and/or share your personal information when you use our services — including when you download and use the <strong>Tenvo</strong> mobile application or engage with us in other related ways such as marketing or events. Reading this notice will help you understand your privacy rights and choices. If you do not agree with our policies and practices, please do not use our Services.
+    </p>
+  </div>
+
+  <!-- Summary Cards -->
+  <div class="summary-section">
+    <div class="wrapper">
+      <h2>Summary of Key Points</h2>
+      <div class="cards">
+        <div class="card">
+          <div class="card-icon">📋</div>
+          <h3>What we collect</h3>
+          <p>Names, phone numbers, email addresses, usernames, and passwords you provide when registering.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🔒</div>
+          <h3>Sensitive data</h3>
+          <p>We do not process sensitive personal information such as racial or ethnic origins, or religious beliefs.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🤝</div>
+          <h3>Third parties</h3>
+          <p>We do not collect any information from third parties.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">⚙️</div>
+          <h3>How we use it</h3>
+          <p>To provide, improve, and administer our Services, communicate with you, and for security and fraud prevention.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🛡️</div>
+          <h3>Keeping it safe</h3>
+          <p>We use organisational and technical security measures, though no transmission is guaranteed 100% secure.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">⚖️</div>
+          <h3>Your rights</h3>
+          <p>Depending on your location you may access, correct, delete, or port your data and withdraw consent.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Table of Contents -->
+  <div class="toc-section">
+    <div class="wrapper">
+      <h2>Table of Contents</h2>
+      <ul class="toc-list">
+        <li><a href="#infocollect"><span class="num">1.</span>What information do we collect?</a></li>
+        <li><a href="#infouse"><span class="num">2.</span>How do we process your information?</a></li>
+        <li><a href="#legalbases"><span class="num">3.</span>What legal bases do we rely on?</a></li>
+        <li><a href="#whoshare"><span class="num">4.</span>When and with whom do we share it?</a></li>
+        <li><a href="#inforetain"><span class="num">5.</span>How long do we keep it?</a></li>
+        <li><a href="#infosafe"><span class="num">6.</span>How do we keep it safe?</a></li>
+        <li><a href="#infominors"><span class="num">7.</span>Do we collect data from minors?</a></li>
+        <li><a href="#privacyrights"><span class="num">8.</span>What are your privacy rights?</a></li>
+        <li><a href="#DNT"><span class="num">9.</span>Do-Not-Track controls</a></li>
+        <li><a href="#policyupdates"><span class="num">10.</span>Do we update this notice?</a></li>
+        <li><a href="#contact"><span class="num">11.</span>How can you contact us?</a></li>
+        <li><a href="#request"><span class="num">12.</span>How can you review or delete your data?</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Policy Sections -->
+  <div class="policy-body">
+    <div class="wrapper">
+
+      <section id="infocollect">
+        <div class="section-number">Section 01</div>
+        <h2>What Information Do We Collect?</h2>
+        <h3>Personal information you disclose to us</h3>
+        <div class="in-short"><p>We collect personal information that you provide to us.</p></div>
+        <p>We collect personal information that you voluntarily provide to us when you register on the Services, express an interest in obtaining information about us or our products and Services, when you participate in activities on the Services, or otherwise when you contact us.</p>
+        <p><strong>Personal Information Provided by You.</strong> The personal information we collect may include the following:</p>
+        <ul>
+          <li>Names</li>
+          <li>Phone numbers</li>
+          <li>Email addresses</li>
+          <li>Usernames</li>
+          <li>Passwords</li>
+        </ul>
+        <p><strong>Sensitive Information.</strong> We do not process sensitive information.</p>
+        <h3>Application Data</h3>
+        <p>If you use our application(s), we may also collect the following if you choose to provide access or permission:</p>
+        <ul>
+          <li><em>Push Notifications.</em> We may request to send you push notifications regarding your account or certain features of the application. You may turn these off in your device's settings.</li>
+        </ul>
+        <p>This information is primarily needed to maintain the security and operation of our application(s), for troubleshooting, and for our internal analytics and reporting purposes.</p>
+        <p>All personal information you provide must be true, complete, and accurate, and you must notify us of any changes.</p>
+      </section>
+
+      <section id="infouse">
+        <div class="section-number">Section 02</div>
+        <h2>How Do We Process Your Information?</h2>
+        <div class="in-short"><p>We process your information to provide, improve, and administer our Services, communicate with you, for security and fraud prevention, and to comply with law. We may also process your information for other purposes with your consent.</p></div>
+        <p>We process your personal information for a variety of reasons, depending on how you interact with our Services, including:</p>
+        <ul>
+          <li><strong>To facilitate account creation and authentication and otherwise manage user accounts.</strong> We may process your information so you can create and log in to your account, as well as keep your account in working order.</li>
+          <li><strong>To save or protect an individual's vital interest.</strong> We may process your information when necessary to save or protect an individual's vital interest, such as to prevent harm.</li>
+        </ul>
+      </section>
+
+      <section id="legalbases">
+        <div class="section-number">Section 03</div>
+        <h2>What Legal Bases Do We Rely On?</h2>
+        <div class="in-short"><p>We only process your personal information when we have a valid legal reason to do so under applicable law — such as with your consent, to comply with laws, to fulfil contractual obligations, or to fulfil our legitimate business interests.</p></div>
+        <p>The General Data Protection Regulation (GDPR) and UK GDPR require us to explain the valid legal bases we rely on. We may rely on the following:</p>
+        <ul>
+          <li><strong>Consent.</strong> We may process your information if you have given us permission for a specific purpose. You can withdraw your consent at any time.</li>
+          <li><strong>Legal Obligations.</strong> We may process your information where necessary for compliance with our legal obligations, such as to cooperate with a law enforcement body or to exercise or defend our legal rights.</li>
+          <li><strong>Vital Interests.</strong> We may process your information where necessary to protect your vital interests or the vital interests of a third party, such as situations involving potential threats to the safety of any person.</li>
+        </ul>
+      </section>
+
+      <section id="whoshare">
+        <div class="section-number">Section 04</div>
+        <h2>When and With Whom Do We Share Your Personal Information?</h2>
+        <div class="in-short"><p>We may share information in specific situations described in this section and/or with specific third parties.</p></div>
+        <p>We may need to share your personal information in the following situations:</p>
+        <ul>
+          <li><strong>Business Transfers.</strong> We may share or transfer your information in connection with, or during negotiations of, any merger, sale of company assets, financing, or acquisition of all or a portion of our business to another company.</li>
+        </ul>
+      </section>
+
+      <section id="inforetain">
+        <div class="section-number">Section 05</div>
+        <h2>How Long Do We Keep Your Information?</h2>
+        <div class="in-short"><p>We keep your information for as long as necessary to fulfil the purposes outlined in this Privacy Notice unless otherwise required by law.</p></div>
+        <p>We will only keep your personal information for as long as it is necessary for the purposes set out in this Privacy Notice, unless a longer retention period is required or permitted by law (such as tax, accounting, or other legal requirements). No purpose in this notice will require us keeping your personal information for longer than the period of time in which users have an account with us.</p>
+        <p>When we have no ongoing legitimate business need to process your personal information, we will either delete or anonymise such information, or, if this is not possible (for example, because your personal information has been stored in backup archives), then we will securely store your personal information and isolate it from any further processing until deletion is possible.</p>
+      </section>
+
+      <section id="infosafe">
+        <div class="section-number">Section 06</div>
+        <h2>How Do We Keep Your Information Safe?</h2>
+        <div class="in-short"><p>We aim to protect your personal information through a system of organisational and technical security measures.</p></div>
+        <p>We have implemented appropriate and reasonable technical and organisational security measures designed to protect the security of any personal information we process. However, despite our safeguards and efforts to secure your information, no electronic transmission over the Internet or information storage technology can be guaranteed to be 100% secure, so we cannot promise or guarantee that hackers, cybercriminals, or other unauthorised third parties will not be able to defeat our security and improperly collect, access, steal, or modify your information.</p>
+        <p>Although we will do our best to protect your personal information, transmission of personal information to and from our Services is at your own risk. You should only access the Services within a secure environment.</p>
+      </section>
+
+      <section id="infominors">
+        <div class="section-number">Section 07</div>
+        <h2>Do We Collect Information From Minors?</h2>
+        <div class="in-short"><p>We do not knowingly collect data from or market to children under 18 years of age.</p></div>
+        <p>We do not knowingly collect, solicit data from, or market to children under 18 years of age, nor do we knowingly sell such personal information. By using the Services, you represent that you are at least 18, or that you are the parent or guardian of such a minor and consent to such minor dependent's use of the Services.</p>
+        <p>If we learn that personal information from users less than 18 years of age has been collected, we will deactivate the account and take reasonable measures to promptly delete such data from our records. If you become aware of any data we may have collected from children under age 18, please contact us at <a href="mailto:davidragel72@gmail.com">davidragel72@gmail.com</a>.</p>
+      </section>
+
+      <section id="privacyrights">
+        <div class="section-number">Section 08</div>
+        <h2>What Are Your Privacy Rights?</h2>
+        <div class="in-short"><p>In some regions, such as the EEA, UK, and Switzerland, you have rights that allow you greater access to and control over your personal information. You may review, change, or terminate your account at any time.</p></div>
+        <p>In some regions (like the EEA, UK, and Switzerland), you have certain rights under applicable data protection laws. These may include the right to:</p>
+        <ul>
+          <li>Request access and obtain a copy of your personal information</li>
+          <li>Request rectification or erasure</li>
+          <li>Restrict the processing of your personal information</li>
+          <li>Data portability (if applicable)</li>
+          <li>Not be subject to automated decision-making</li>
+          <li>Object to the processing of your personal information</li>
+        </ul>
+        <p>You can make such a request by contacting us using the contact details in <a href="#contact">Section 11</a>.</p>
+        <p>If you are located in the EEA or UK and you believe we are unlawfully processing your personal information, you also have the right to complain to your <a href="https://ec.europa.eu/justice/data-protection/bodies/authorities/index_en.htm" target="_blank" rel="noopener">Member State data protection authority</a> or the <a href="https://ico.org.uk/make-a-complaint/data-protection-complaints/data-protection-complaints/" target="_blank" rel="noopener">UK data protection authority</a>.</p>
+        <p>If you are located in Switzerland, you may contact the <a href="https://www.edoeb.admin.ch/edoeb/en/home.html" target="_blank" rel="noopener">Federal Data Protection and Information Commissioner</a>.</p>
+        <h3>Withdrawing your consent</h3>
+        <p>If we are relying on your consent to process your personal information, you have the right to withdraw your consent at any time by contacting us using the details in <a href="#contact">Section 11</a>. Please note that this will not affect the lawfulness of the processing before its withdrawal.</p>
+        <h3>Account Information</h3>
+        <p>If you would at any time like to review or change the information in your account or terminate your account, you can log in to your account settings and update your user account.</p>
+        <p>Upon your request to terminate your account, we will deactivate or delete your account and information from our active databases. However, we may retain some information in our files to prevent fraud, troubleshoot problems, assist with any investigations, enforce our legal terms and/or comply with applicable legal requirements.</p>
+      </section>
+
+      <section id="DNT">
+        <div class="section-number">Section 09</div>
+        <h2>Controls for Do-Not-Track Features</h2>
+        <p>Most web browsers and some mobile operating systems and mobile applications include a Do-Not-Track ('DNT') feature or setting you can activate to signal your privacy preference not to have data about your online browsing activities monitored and collected. At this stage, no uniform technology standard for recognising and implementing DNT signals has been finalised. As such, we do not currently respond to DNT browser signals or any other mechanism that automatically communicates your choice not to be tracked online. If a standard for online tracking is adopted that we must follow in the future, we will inform you about that practice in a revised version of this Privacy Notice.</p>
+      </section>
+
+      <section id="policyupdates">
+        <div class="section-number">Section 10</div>
+        <h2>Do We Make Updates to This Notice?</h2>
+        <div class="in-short"><p>Yes, we will update this notice as necessary to stay compliant with relevant laws.</p></div>
+        <p>We may update this Privacy Notice from time to time. The updated version will be indicated by an updated 'Revised' date at the top of this Privacy Notice. If we make material changes to this Privacy Notice, we may notify you either by prominently posting a notice of such changes or by directly sending you a notification. We encourage you to review this Privacy Notice frequently to be informed of how we are protecting your information.</p>
+      </section>
+
+      <section id="contact">
+        <div class="section-number">Section 11</div>
+        <h2>How Can You Contact Us About This Notice?</h2>
+        <p>If you have questions or comments about this notice, you may email us or contact us by post:</p>
+        <div class="contact-block">
+          <p>📧 <a href="mailto:davidragel72@gmail.com">davidragel72@gmail.com</a></p>
+        </div>
+      </section>
+
+      <section id="request">
+        <div class="section-number">Section 12</div>
+        <h2>How Can You Review, Update, or Delete the Data We Collect From You?</h2>
+        <p>Based on the applicable laws of your country, you may have the right to request access to the personal information we collect from you, details about how we have processed it, correct inaccuracies, or delete your personal information. You may also have the right to withdraw your consent to our processing of your personal information. These rights may be limited in some circumstances by applicable law.</p>
+        <p>To request to review, update, or delete your personal information, please fill out and submit a <a href="https://app.termly.io/dsar/f0814807-1830-4f88-9f4e-c88eb1e6f206" target="_blank" rel="noopener">data subject access request</a>.</p>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 <span>Tenvo</span>. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
